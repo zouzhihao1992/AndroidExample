@@ -9,6 +9,7 @@ import android.widget.SimpleAdapter;
 
 import com.android.zzh.androidexample.R;
 import com.android.zzh.androidexample.adapter.MySimpleAdapter;
+import com.android.zzh.androidexample.other.DividerItemDecoration;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -34,6 +35,9 @@ public class RecyclerViewListView extends AppCompatActivity {
         recyclerView.setAdapter(adapter);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false);
         recyclerView.setLayoutManager(linearLayoutManager);
+
+        //设置Recyclerview的item的分隔线
+         recyclerView.addItemDecoration(new DividerItemDecoration(this,DividerItemDecoration.VERTICAL_LIST));
 
     }
 
