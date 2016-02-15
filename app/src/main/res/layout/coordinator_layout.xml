@@ -5,15 +5,30 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <android.support.v7.widget.Toolbar
-        android:id="@id/toolbar_coordinatorLayout"
+    <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"
-        android:background="?attr/colorPrimary"
-        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
-        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true"
 
-    </android.support.v7.widget.Toolbar>
+        >
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar_coordinatorLayout"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:layout_scrollFlags="scroll|enterAlways">
+            <!--layout_sccrollFlags这个属性需要放在toolbar中，经测试，放在AppLayout中不能生效-->
+        </android.support.v7.widget.Toolbar>
+    </android.support.design.widget.AppBarLayout>
+
+        <!--只有 NestedScrollView 和 RecyclerView 能相应 toolbar中的layout_scrollFlag属性。-->
+        <!--如果需要使用其他空间，应该将其放在NestedScrollView中。-->
+        <!--listview放在NestedScrollView中有冲突。解决办法见http://jingyan.baidu.com/article/afd8f4de4695af34e386e969.html（已保存在印象笔记）-->
+
+
+
 
 
 </android.support.design.widget.CoordinatorLayout>

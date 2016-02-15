@@ -2,6 +2,7 @@ package com.android.zzh.androidexample.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.design.widget.CoordinatorLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
@@ -15,7 +16,8 @@ import com.android.zzh.androidexample.R;
  * Created by zzh on 16/2/14.
  */
 public class MainActivity extends AppCompatActivity {
-    private final static String[] names ={"TextInputLayout","TabLayout","NavigationView","CoordinaryLayout"};
+    private final static String[] names ={"TextInputLayout","TabLayout","NavigationView","CoordinaryLayout"
+    ,"RecyclerViewListView"};
     private ListView listView;
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -40,6 +42,12 @@ public class MainActivity extends AppCompatActivity {
                         break;
                     case 2:
                         startActivity(new Intent(MainActivity.this,NavigationViewActivity.class));
+                        break;
+                    case 3:
+                        startActivity(new Intent(MainActivity.this, CoordinatorLayoutActivity.class));
+                        break;
+                    case 4:
+                        startActivity(new Intent(MainActivity.this,RecyclerViewListView.class));
                         break;
                 }
             }

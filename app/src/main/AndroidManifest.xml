@@ -20,6 +20,7 @@
         <activity android:name=".activity.TabLayoutActivity"></activity>
         <activity android:name=".activity.NavigationViewActivity"></activity>
         <activity android:name=".activity.CoordinatorLayoutActivity"></activity>
+        <activity android:name=".activity.RecyclerViewListView"></activity>
     </application>
 
 </manifest>
