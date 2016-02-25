@@ -1,5 +1,6 @@
 package com.android.zzh.androidexample.activity;
 
+import android.app.ListActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -16,7 +17,7 @@ import com.android.zzh.androidexample.R;
  */
 public class MainActivity extends AppCompatActivity {
     private final static String[] names ={"CommonViewActivity","TabLayout","NavigationView","CoordinaryLayout"
-    ,"RecyclerViewActivity","FragmentActivity"};
+    ,"RecyclerViewActivity","FragmentActivity","ListViewActivity"};
     private ListView listView;
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -50,6 +51,11 @@ public class MainActivity extends AppCompatActivity {
                         break;
                     case 5:
                         startActivity(new Intent(MainActivity.this,FragmentActivity.class));
+                        break;
+                    case 6:
+                        Intent intent = new Intent(MainActivity.this, ListViewActivity.class);
+                        intent.putExtra("type",ListViewActivity.SIMPLE_ARRAYADAPTER);
+                        startActivity(intent);
                         break;
                 }
             }
