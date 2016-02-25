@@ -15,12 +15,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activity.TextInputLayoutActivity"></activity>
+        <activity android:name=".activity.CommonViewActivity"></activity>
 
         <activity android:name=".activity.TabLayoutActivity"></activity>
         <activity android:name=".activity.NavigationViewActivity"></activity>
         <activity android:name=".activity.CoordinatorLayoutActivity"></activity>
-        <activity android:name=".activity.RecyclerViewListView"></activity>
+        <activity android:name=".activity.RecyclerViewActivity"></activity>
+        <activity android:name=".activity.RecyclerViewStaggerActivity"></activity>
+        <activity android:name=".activity.FragmentActivity"></activity>
     </application>
 
 </manifest>

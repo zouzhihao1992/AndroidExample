@@ -2,7 +2,6 @@ package com.android.zzh.androidexample.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.CoordinatorLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
@@ -16,8 +15,8 @@ import com.android.zzh.androidexample.R;
  * Created by zzh on 16/2/14.
  */
 public class MainActivity extends AppCompatActivity {
-    private final static String[] names ={"TextInputLayout","TabLayout","NavigationView","CoordinaryLayout"
-    ,"RecyclerViewListView"};
+    private final static String[] names ={"CommonViewActivity","TabLayout","NavigationView","CoordinaryLayout"
+    ,"RecyclerViewActivity","FragmentActivity"};
     private ListView listView;
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -35,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 switch (position){
                     case 0:  //TextInputLayout
-                        startActivity(new Intent(MainActivity.this,TextInputLayoutActivity.class));
+                        startActivity(new Intent(MainActivity.this,CommonViewActivity.class));
                         break;
                     case 1: //TabLayout
                         startActivity(new Intent(MainActivity.this,TabLayoutActivity.class));
@@ -47,7 +46,10 @@ public class MainActivity extends AppCompatActivity {
                         startActivity(new Intent(MainActivity.this, CoordinatorLayoutActivity.class));
                         break;
                     case 4:
-                        startActivity(new Intent(MainActivity.this,RecyclerViewListView.class));
+                        startActivity(new Intent(MainActivity.this,RecyclerViewActivity.class));
+                        break;
+                    case 5:
+                        startActivity(new Intent(MainActivity.this,FragmentActivity.class));
                         break;
                 }
             }

@@ -7,28 +7,54 @@
 
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:fitsSystemWindows="true"
-
-        >
-        <android.support.v7.widget.Toolbar
-            android:id="@+id/toolbar_coordinatorLayout"
+        android:layout_height="300dp"
+        android:fitsSystemWindows="true">
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:id="@+id/collapsingToolbarLayout"
+            app:expandedTitleMarginStart="80dp"
             android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            android:background="?attr/colorPrimary"
-            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
-            app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
-            app:layout_scrollFlags="scroll|enterAlways">
-            <!--layout_sccrollFlags这个属性需要放在toolbar中，经测试，放在AppLayout中不能生效-->
-        </android.support.v7.widget.Toolbar>
+            android:layout_height="match_parent"
+            app:contentScrim="?attr/colorPrimary"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"
+                android:src="@drawable/toolbarimg"
+                app:layout_collapseMode="parallax"
+                app:layout_collapseParallaxMultiplier="0.7"/>
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar_coordinatorLayout"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+                app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+                <!--app:layout_scrollFlags可以设置的值有 scroll|enterAlways ，enterAlwaysCollapsed-->
+                <!--，scroll|exitUntilCollapsed。其中scroll|exitUntilCollapsed需要设置一个minHeight属性-->
+                <!--layout_sccrollFlags这个属性需要放在toolbar中，经测试，放在AppLayout中不能生效-->
+            </android.support.v7.widget.Toolbar>
+        </android.support.design.widget.CollapsingToolbarLayout>
+
     </android.support.design.widget.AppBarLayout>
 
-        <!--只有 NestedScrollView 和 RecyclerView 能相应 toolbar中的layout_scrollFlag属性。-->
-        <!--如果需要使用其他空间，应该将其放在NestedScrollView中。-->
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab_coordinatorlayoutactivity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity = "bottom|right"
+        android:src="@android:drawable/ic_menu_add"
+        android:layout_margin="10dp"/>
+
+        <!--只有 NestedScrollView 和 RecyclerView 能响应 toolbar中的layout_scrollFlag属性。-->
+        <!--如果需要使用其他控件，应该将其放在NestedScrollView中。-->
         <!--listview放在NestedScrollView中有冲突。解决办法见http://jingyan.baidu.com/article/afd8f4de4695af34e386e969.html（已保存在印象笔记）-->
 
 
-
-
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerview_coordinator_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
 
 </android.support.design.widget.CoordinatorLayout>
