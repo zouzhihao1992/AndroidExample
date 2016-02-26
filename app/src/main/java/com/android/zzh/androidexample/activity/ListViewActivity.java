@@ -4,13 +4,18 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.android.zzh.androidexample.R;
 import com.google.android.gms.common.api.GoogleApiClient;
@@ -25,6 +30,7 @@ public class ListViewActivity extends AppCompatActivity {
     public static final int SIMPLE_ARRAYADAPTER = 0;
     public static final int CUSTOM_ARRAYADAPTER = 1;
     ListView listView;
+    private Toolbar toolbar;
     /**
      * ATTENTION: This was auto-generated to implement the App Indexing API.
      * See https://g.co/AppIndexing/AndroidStudio for more information.
@@ -35,6 +41,10 @@ public class ListViewActivity extends AppCompatActivity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.listview_activity);
+
+        toolbar  = (Toolbar) findViewById(R.id.toolbar_listview);
+        setSupportActionBar(toolbar);
+
         listView = (ListView) findViewById(R.id.listview_test);
         List<String> list = new ArrayList<String>();
         for (int i = 'A'; i < 'z'; i++) {
@@ -58,6 +68,12 @@ public class ListViewActivity extends AppCompatActivity {
                 break;
 
         }
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Toast.makeText(ListViewActivity.this,""+position,Toast.LENGTH_LONG).show();
+            }
+        });
 
     }
 
@@ -82,6 +98,7 @@ public class ListViewActivity extends AppCompatActivity {
                 viewHolder.textView = (TextView) view.findViewById(R.id.TextView_ImageView_Description);
                 view.setTag(viewHolder);
             }else{
+                view = convertView;
                 viewHolder = (MyAdapter.ViewHolder)convertView.getTag();
             }
 
@@ -116,4 +133,27 @@ public class ListViewActivity extends AppCompatActivity {
 
     }
 
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_listview,menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()){
+            case R.id.action_custom_arrayadapter:
+                Intent intent = new Intent(this,ListViewActivity.class);
+                intent.putExtra("type",ListViewActivity.CUSTOM_ARRAYADAPTER);
+                startActivity(intent);
+                finish();
+                break;
+            case R.id.action_simple_arrayadapter:
+                Intent intent2 = new Intent(this,ListViewActivity.class);
+                intent2.putExtra("type",ListViewActivity.SIMPLE_ARRAYADAPTER);
+                startActivity(intent2);
+                finish();
+        }
+        return true;
+    }
 }

@@ -24,6 +24,7 @@
         <activity android:name=".activity.RecyclerViewStaggerActivity"></activity>
         <activity android:name=".activity.FragmentActivity"></activity>
         <activity android:name=".activity.ListViewActivity"></activity>
+        <activity android:name=".activity.listViewChatActivity"></activity>
 
     </application>
 
