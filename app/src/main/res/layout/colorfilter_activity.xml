@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<LinearLayout
+    android:id="@+id/linearLayout1_colorfilter_activity"
+    android:layout_width="200dp"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RadioGroup
+        android:id="@+id/RadioGroup_colorfilter_activity_txt_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <RadioButton
+            android:layout_margin="5dp"
+            android:text="txt"
+            android:id="@+id/RadioButton_select_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"/>
+        <RadioButton
+            android:layout_margin="5dp"
+            android:text="image"
+            android:id="@+id/RadioButton_select_image"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </RadioGroup>
+
+    <SeekBar
+        android:layout_margin="10dp"
+        android:id="@+id/seekbar_r"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:max="200"
+        android:progress="100"
+        android:background="@drawable/colordrawabler"/>
+    <SeekBar
+        android:layout_margin="10dp"
+        android:id="@+id/seekbar_g"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:max="200"
+        android:progress="100"
+        android:background="@drawable/colordrawableg"/>
+    <SeekBar
+        android:layout_margin="10dp"
+        android:id="@+id/seekbar_b"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:max="200"
+        android:progress="100"
+        android:background="@drawable/colordrawableb"/>
+    <SeekBar
+        android:layout_margin="10dp"
+        android:id="@+id/seekbar_a"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:max="200"
+        android:progress="100"
+        android:background="@drawable/colordrawablea"/>
+</LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout2_colorfilter_activity"
+        android:layout_below="@id/linearLayout1_colorfilter_activity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <RadioGroup
+            android:id="@+id/RadioGroup_colorfilter_activity_matrix"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <RadioButton
+                android:layout_margin="5dp"
+                android:text="matrix1"
+                android:id="@+id/RadioButton_matrix1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <RadioButton
+                android:layout_margin="5dp"
+                android:text="matrix2"
+                android:id="@+id/RadioButton_matrix2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </RadioGroup>
+        <TextView
+            android:id="@+id/textView_colorfilter_activity"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:text="nihao"
+            android:gravity="center"
+            android:background="@drawable/colordrawable"/>
+        <ImageView
+            android:id="@+id/imageView_colorfilter_activity"
+            android:layout_marginLeft="20dp"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:background="@drawable/toolbarimg"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout3_colorfilter_activity"
+        android:layout_below="@id/linearLayout2_colorfilter_activity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="10dp">
+        <RadioGroup
+            android:id="@+id/RadioGroup_colorfilter_activity_light"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <RadioButton
+                android:layout_margin="5dp"
+                android:text="light1"
+                android:id="@+id/RadioButton_light1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <RadioButton
+                android:layout_margin="5dp"
+                android:text="light2"
+                android:id="@+id/RadioButton_light2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </RadioGroup>
+
+    <Button
+        android:layout_marginLeft="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/PoterDuffButton"
+        android:text="PoterDuff"/>
+    </LinearLayout>
+
+</RelativeLayout>

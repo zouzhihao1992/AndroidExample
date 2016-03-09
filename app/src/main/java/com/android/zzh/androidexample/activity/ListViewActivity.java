@@ -31,11 +31,7 @@ public class ListViewActivity extends AppCompatActivity {
     public static final int CUSTOM_ARRAYADAPTER = 1;
     ListView listView;
     private Toolbar toolbar;
-    /**
-     * ATTENTION: This was auto-generated to implement the App Indexing API.
-     * See https://g.co/AppIndexing/AndroidStudio for more information.
-     */
-    private GoogleApiClient client;
+
 
     @Override
     public void onCreate(Bundle savedInstanceState) {

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="我是占位置的"
+        android:textSize="25sp"/>
+    <com.android.zzh.androidexample.view.MyTextView
+        android:id="@+id/textView_scroll_activity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="你好，scroll"
+        android:textSize="25sp"
+        android:background="@drawable/toolbarimg"/>
+    <EditText
+        android:id="@+id/EditText_scroll_activity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <Button
+        android:id="@+id/Button_scroll_activity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="move"/>
+</LinearLayout>

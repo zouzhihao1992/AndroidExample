@@ -17,7 +17,7 @@ import com.android.zzh.androidexample.R;
  */
 public class ViewPagerFragment extends Fragment {
 
-    private String mContent;
+    private String mContent = "hehe";
     private View view;
     public ViewPagerFragment(String content){
         mContent = content;

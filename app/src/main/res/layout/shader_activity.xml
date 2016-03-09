@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RadioGroup
+        android:id="@+id/RadioGroup_shader_activity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <RadioButton
+            android:id="@+id/RadioButton_BitmapShader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="BitmapShader"/>
+        <RadioButton
+            android:id="@+id/RadioButton_ComposeShader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ComposeShader"/>
+        <RadioButton
+            android:id="@+id/RadioButton_LinearGradient"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="LinearGradient"/>
+        <RadioButton
+            android:id="@+id/RadioButton_RadialGradient"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="RadialGradient"/>
+        <RadioButton
+            android:id="@+id/RadioButton_sweepGradient"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="sweepGradient"/>
+    </RadioGroup>
+
+    <ImageView
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:id="@+id/ImageView_shader_activity"
+        />
+</LinearLayout>

@@ -11,10 +11,10 @@
         app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
         app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
         android:background="?attr/colorPrimary"/>
-    <ListView
+    <com.android.zzh.androidexample.view.LoadView
         android:id="@+id/listview_test"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-    </ListView>
+    </com.android.zzh.androidexample.view.LoadView>
 
 </LinearLayout>

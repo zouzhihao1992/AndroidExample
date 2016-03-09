@@ -32,18 +32,36 @@ public class MsgAdapter extends ArrayAdapter<Msg> {
         Msg msg = getItem(position);
         View view = null;
         MsgAdapter.ViewHolder viewHolder;
-        if (convertView != null){
-            view = LayoutInflater.from(getContext()).inflate(R.layout.item_listview_chat,null);
+        if (convertView == null){
+            view = LayoutInflater.from(getContext()).inflate(resourceID,null);
             viewHolder = new ViewHolder();
-            viewHolder.leftLayout = (LinearLayout) view.findViewById(R.id.left_layout);
+            viewHolder.leftTextView = (TextView)view.findViewById(R.id.left_msg);
+            viewHolder.rightTextView = (TextView)view.findViewById(R.id.right_msg);
+            viewHolder.leftLayout = (LinearLayout)view.findViewById(R.id.left_layout);
+            viewHolder.rightLayout = (LinearLayout)view.findViewById(R.id.right_layout);
+            view.setTag(viewHolder);
+        }else{
+            view = convertView;
+            viewHolder = (ViewHolder)view.getTag();
+        }
+
+        if(msg.getType() == Msg.TYPE_RECEIVED){
+            viewHolder.leftLayout.setVisibility(View.VISIBLE);
+            viewHolder.rightLayout.setVisibility(View.GONE);
+            viewHolder.leftTextView.setText(msg.getContent());
+        }else{
+            viewHolder.rightLayout.setVisibility(View.VISIBLE);
+            viewHolder.leftLayout.setVisibility(View.GONE);
+            viewHolder.rightTextView.setText(msg.getContent());
         }
         return view;
     }
 
     class ViewHolder{
-        public TextView leftTextView;
-        public TextView rightTextView;
-        LinearLayout leftLayout;
-        LinearLayout rightLayout;
+         LinearLayout leftLayout;
+         LinearLayout rightLayout;
+         TextView leftTextView;
+         TextView rightTextView;
+
     }
 }

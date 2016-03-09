@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.android.zzh.androidexample.view.MyViewGroup
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#aa111111"
+    android:id="@+id/MyViewGroup">
+
+    <com.android.zzh.androidexample.view.MyView
+        android:layout_width="0dp"
+        android:layout_height="300dp"
+        android:background="#ff0000"/>
+
+</com.android.zzh.androidexample.view.MyViewGroup>

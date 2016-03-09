@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="我是占位置的"
+            android:textSize="20sp"/>
+
+        <com.android.zzh.androidexample.view.MyImageView
+            android:id="@+id/ImageView1_drawable_avtivity"
+            android:layout_width="100px"
+            android:layout_height="200px"
+            android:background="#aaff0000"/>
+        <!--Linearlayout按照measure的值进行排列-->
+        <ImageView
+            android:layout_gravity="center"
+            android:id="@+id/ImageView2_drawable_avtivity"
+             android:layout_width="200dp"
+            android:layout_height="100dp"
+            android:background="#aa00ff00"/>
+</LinearLayout>

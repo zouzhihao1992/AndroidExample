@@ -16,7 +16,6 @@
             </intent-filter>
         </activity>
         <activity android:name=".activity.CommonViewActivity"></activity>
-
         <activity android:name=".activity.TabLayoutActivity"></activity>
         <activity android:name=".activity.NavigationViewActivity"></activity>
         <activity android:name=".activity.CoordinatorLayoutActivity"></activity>
@@ -25,6 +24,17 @@
         <activity android:name=".activity.FragmentActivity"></activity>
         <activity android:name=".activity.ListViewActivity"></activity>
         <activity android:name=".activity.listViewChatActivity"></activity>
+        <activity android:name=".activity.ListViewPageActivity"></activity>
+        <activity android:name=".activity.TouchEventActivity"></activity>
+        <activity android:name=".activity.CircleViewActivity"></activity>
+        <activity android:name=".activity.ScrollActivity"></activity>
+        <activity android:name=".activity.HorzontalScrollViewActivity"></activity>
+        <activity android:name=".activity.CustomViewActivity"></activity>
+        <activity android:name=".activity.AIDLActivity"></activity>
+        <activity android:name=".activity.DrawableActivity"></activity>
+        <activity android:name=".activity.ShaderActivity"></activity>
+        <activity android:name=".activity.XMLShapeActivity"></activity>
+        <activity android:name=".activity.ColorFilterActivity"></activity>
 
     </application>
 
